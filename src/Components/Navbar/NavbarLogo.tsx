@@ -1,4 +1,4 @@
-import React from "react";
+
 import logo from "../../assets/images/logo.png";
 import "./Navbar.css";
 import ImageComponent from "../Image/ImageComponent";

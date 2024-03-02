@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, useContext } from "react";
+import React, { createContext, useEffect, useState, useContext,ReactNode } from "react";
 import _ from "lodash";
 
 const ScrollContext = createContext({
@@ -8,7 +8,7 @@ const ScrollContext = createContext({
     scrollPercentage: 0,
 });
 
-function ScrollProvider({ children }) {
+function ScrollProvider({ children }: { children: ReactNode }) {
     const [scrollY, setScrollY] = useState(0);
     const [scrollHeight, setScrollHeight] = useState(
         document.documentElement.scrollHeight
@@ -45,10 +45,10 @@ function ScrollProvider({ children }) {
 
     return (
         <ScrollContext.Provider
-            value={{ scrollY, scrollHeight, clientHeight, scrollPercentage }}
-        >
-            {children}
-        </ScrollContext.Provider>
+        value={{ scrollY, scrollHeight, clientHeight, scrollPercentage }}
+    >
+        {React.Children.toArray(children)}
+    </ScrollContext.Provider>
     );
 }
 

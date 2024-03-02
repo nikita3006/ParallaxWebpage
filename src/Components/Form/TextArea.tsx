@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from "react";
+import React, {  useState } from "react";
 import "../../routes/Contact/Contact.css";
 import { FormControlContext } from "./FormControl";
 

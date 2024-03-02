@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Suspense } from "react";
 import { useTranslation } from "react-i18next";
-import { navItems } from "../../App";
+import { navItems } from "../../App"; 
 import ModalSelectLanguage from "../Modal/ModalLanguageSelector";
 import Navlink from "./Navlink";
 
-const NavbarMenu = () => {
+const NavbarMenu: React.FC = () => {
     const { t } = useTranslation("navbar");
-    const [isLanguageModalOpen, setLanguageModalOpen] = useState(false);
+    const [isLanguageModalOpen, setLanguageModalOpen] = useState<boolean>(false);
 
     const openLanguageModal = () => {
         setLanguageModalOpen(true);
@@ -17,7 +17,7 @@ const NavbarMenu = () => {
         setLanguageModalOpen(false);
     };
 
-    const navigationItems = navItems.map((item) => (
+    const navigationItems = navItems.map((item: navItems) => (
         <li key={item.path} className="nav-item">
             <Navlink
                 variant={item.subLinks ? "expandableNavlink" : "simpleNavlink"}

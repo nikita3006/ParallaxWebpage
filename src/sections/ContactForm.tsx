@@ -26,14 +26,27 @@ const formDataSchema = z.object({
 type formDataType = z.infer<typeof formDataSchema>;
 
 interface ContactFormProps {
-    onSubmit: (formData: { [key: string]: any }) => void;
+    onSubmit: (formData: formDataType) => void;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     const { t } = useTranslation("contact");
+    const [formData, setFormData] = useState<formDataType>({
+        name: "",
+        email: "",
+        message: "",
+    });
 
-    const handleSubmit = (values: { [key: string]: any }) => {
-        onSubmit(values);
+    const handleSubmit = () => {
+        onSubmit(formData);
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value,
+        }));
     };
 
     return (
@@ -41,23 +54,23 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             <div className="form-group">
                 <FormControl name="name">
                     <FormLabel htmlFor="name">{t("name")}</FormLabel>
-                    <Input type="text" id="name" name="name" />
+                    <Input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
                     <FormErrorMessage />
                 </FormControl>
 
                 <FormControl name="email">
                     <FormLabel htmlFor="email">{t("email")}</FormLabel>
-                    <Input type="text" id="email" name="email" />
+                    <Input type="text" id="email" name="email" value={formData.email} onChange={handleChange} />
                     <FormErrorMessage />
 
                     <FormHelperText>
-                        We will never share you're e-mail to anyone.
+                        We will never share your email with anyone.
                     </FormHelperText>
                 </FormControl>
 
                 <FormControl name="message">
                     <FormLabel htmlFor="message">{t("message")}</FormLabel>
-                    <Textarea id="message" name="message" />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} />
                     <FormErrorMessage />
                 </FormControl>
             </div>
