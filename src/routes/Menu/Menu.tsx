@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Parallax } from "react-parallax";
 import { useTranslation } from "react-i18next";
 import UseQueryWrapper from "../../Components/ReactQuery/UseQueryWrapper";
