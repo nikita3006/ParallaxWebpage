@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { useQuery, QueryFunction, QueryKey } from '@tanstack/react-query';
 
 interface QueryWrapperProps<TData> {
