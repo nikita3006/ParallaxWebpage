@@ -38,7 +38,7 @@ function Menu() {
                 <h1>{t("menu")}</h1>
                 <div className="menu-items">
                     <UseQueryWrapper<Dish[]>
-                        queryKeyName="dishes"
+                        queryKeyName={["dishes"]}
                         queryFnName={fetchDishes}
                     >
                         {(data) =>
