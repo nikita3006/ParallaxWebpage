@@ -4,6 +4,7 @@ import { Parallax } from "react-parallax";
 import { useTranslation } from "react-i18next";
 import menu from "../../assets/images/menu-background.jpg";
 import MenuItem from "../../Components/Menu/MenuItem";
+import UseQueryWrapper from "../../Components/ReactQuery/UseQueryWrapper";
 
 
 interface Dish {
