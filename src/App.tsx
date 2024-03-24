@@ -14,21 +14,25 @@ export const navItems = [
         path: "home",
         element: <Home />,
         meta: { title: "home" },
+        subLinks: [{to: "", label: ""}]
     },
     {
         path: "team",
         element: <Team />,
         meta: { title: "team" },
+        subLinks: [{to: "", label: ""}]
     },
     {
         path: "menu",
         element: <Menu />,
         meta: { title: "menu" },
+        subLinks: [{to: "", label: ""}]
     },
     {
         path: "contact",
         element: <Contact />,
         meta: { title: "contact" },
+        subLinks: [{to: "", label: ""}]
     },
 ];
 

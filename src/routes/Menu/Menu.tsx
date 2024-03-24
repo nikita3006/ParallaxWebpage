@@ -1,8 +1,10 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState} from "react";
 import { Parallax } from "react-parallax";
+
 import { useTranslation } from "react-i18next";
 import menu from "../../assets/images/menu-background.jpg";
 import MenuItem from "../../Components/Menu/MenuItem";
+
 
 interface Dish {
     image: string;
@@ -92,6 +94,25 @@ function Menu() {
                             />
                         </Suspense>
                     ))}
+                    <UseQueryWrapper<Dish[]>
+                        queryKeyName={["dishes"]}
+                        queryFnName={fetchDishes}
+                    >
+                        {(data) =>
+                            data.map((dish, index) => (
+                                <Suspense
+                                    fallback={<div>Loading...</div>}
+                                    key={index}
+                                >
+                                    <MenuItem
+                                        imageSrc={dish.image}
+                                        name={t(dish.name)}
+                                        blurhash={dish.blurhash}
+                                    />
+                                </Suspense>
+                            ))
+                        }
+                    </UseQueryWrapper>
                 </div>
             </div>
         </Parallax>

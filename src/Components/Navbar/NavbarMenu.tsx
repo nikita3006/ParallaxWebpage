@@ -17,7 +17,7 @@ const NavbarMenu: React.FC = () => {
         setLanguageModalOpen(false);
     };
 
-    const navigationItems = navItems.map((item: navItems) => (
+    const navigationItems = navItems.map((item) => (
         <li key={item.path} className="nav-item">
             <Navlink
                 variant={item.subLinks ? "expandableNavlink" : "simpleNavlink"}
