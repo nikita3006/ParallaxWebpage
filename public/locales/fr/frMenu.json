@@ -1,9 +1,9 @@
 {
-    "menu": {
+  
         "hamburger": "Hamburger",
         "momo": "Momo",
         "nouilles": "Nouilles",
         "riz frit": "Riz frit",
         "sushi": "Sushis"
-      }
+ 
 }
