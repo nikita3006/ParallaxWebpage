@@ -27,14 +27,22 @@
 .team-member h2 {
   font-size: 2rem;
   margin: 0;
+  color:rgba(194, 50, 40, 0.92);
+  width:40rem;
+  margin-left:27rem
 }
 .team-member h3 {
   font-size: 1.5rem;
   margin: 0;
+  color:black;
+  width:40rem;
+  margin-left:27rem;
 }
 
 .team-member p {
   margin: 5px 0;
   font-size: 1.5rem;
-  background-color: rgb(236, 233, 233);
+  color: rgb(65, 43, 43);
+  width:40rem;
+  margin-left:27rem
 }

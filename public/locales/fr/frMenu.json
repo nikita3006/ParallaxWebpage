@@ -1,9 +1,9 @@
 {
-    "menu" : "Le menu du restaurant",
-    "momo" : "Maman",
-    "pasta" :"Pâtes",
-    "noodles" : "Nouilles",
-    "pizza": "Pizza",
-    "kadhaiPaneer": "Katha Paneer",
-    "sandwich" : "Sandwich"
+    "menu": {
+        "hamburger": "Hamburger",
+        "momo": "Momo",
+        "nouilles": "Nouilles",
+        "riz frit": "Riz frit",
+        "sushi": "Sushis"
+      }
 }

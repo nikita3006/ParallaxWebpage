@@ -1,9 +1,9 @@
 {
-    "menu" : "Restaurant Menu",
-    "momo" : "Momo",
-    "pasta" :"Pasta",
-    "noodles" : "Noodles",
-    "pizza": "Pizza",
-    "kadhaiPaneer": "Kadhai Paneer",
-    "sandwich" : "Sandwich"
+    "menu": {
+      "Burger": "Burger",
+      "Momo": "Momo",
+      "Noodles": "Noodles",
+      "Fried rice": "Fried Rice",
+      "Sushi": "Sushi"
+    }
 }
