@@ -18,18 +18,21 @@
 .navbar-logo {
    margin-left: 3rem;
    height: 15vh;
+   margin-top:2rem
  }
  .navbar-logo img {
-   height: 15vh;
+   height: 12vh;
    width: 10vw;
+   
  }
  .nav-item {
    list-style: none;
    display: flex;
    margin-right: 1rem;
-   height: 15vh;
+   height: 10vh;
    font-size:x-large;
    align-items: center; 
+   margin-top:1rem
  }
  
  #logo-ham{

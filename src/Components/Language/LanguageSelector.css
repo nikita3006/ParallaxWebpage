@@ -1,5 +1,5 @@
 .language-selector {
-  padding: 3px;
+  padding: 5px;
   font-size: large;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -7,5 +7,6 @@
   color: white;
   cursor: pointer;
   outline: none;
- 
+  position: relative;
+  top:-2rem
 }

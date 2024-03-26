@@ -35,7 +35,7 @@ const NavbarMenu: React.FC = () => {
                 <Suspense fallback={<div>Loading...</div>}>
                     <button
                         onClick={openLanguageModal}
-                        style={{ width: "150px", fontSize: "large" }}
+                        style={{ width: "150px", fontSize: "large",marginTop:"-1rem" }}
                     >
                         Language
                     </button>

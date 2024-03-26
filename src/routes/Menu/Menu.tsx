@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState} from "react";
+import  { Suspense, useEffect, useState} from "react";
 import { Parallax } from "react-parallax";
 
 import { useTranslation } from "react-i18next";
@@ -52,7 +52,7 @@ const mockDishes: Dish[] = [
 
 const fetchDishes = async (): Promise<Dish[]> => {
     const response = await fetch(
-        "https://crudcrud.com/api/1fb368fcb6d84da39528a5323bf54994/menu-item/",
+        "https://crudcrud.com/api/cf331822c3b844c69624a2c157d60a33/menu-item/",
     );
     if (!response.ok) {
         throw new Error("Error fetching dishes");

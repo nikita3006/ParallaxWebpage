@@ -1,5 +1,5 @@
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate  } from "react-router-dom";
 import Layout from "./routes/Layout/Layout";
 import Home from "./routes/Home/Home";
 import Team from "./routes/Team/Team";
@@ -39,8 +39,10 @@ export const navItems = [
 const router = createBrowserRouter([
     {
         path: "/",
+      
         element: (
             <>
+                <Navigate to="/home" />
                 <Layout />
             </>
         ),
